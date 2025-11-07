@@ -1,0 +1,313 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #FFF8E1; /* Cream general background */
+    color: #424242; /* Dark grey text */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50; /* Soft Green */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .logo img {
+    height: 50px;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF; /* White links */
+    font-weight: bold;
+}
+header nav ul li a.active {
+    border-bottom: 2px solid #388E3C; /* Deep Green active */
+}
+header nav ul li a:hover {
+    color: #388E3C; /* Deep Green hover */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #87CEEB; /* Sky Blue */
+    overflow: hidden;
+    height: 400px;
+}
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+}
+.hero img.active {
+    display: block;
+}
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.btn {
+    background-color: #FF9800; /* Bright Orange */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #FB8C00; /* Darker Orange */
+}
+
+/* Highlights / Programs */
+.highlights, .programs {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #FFF9C4; /* Light Yellow */
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+.card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    color: #2E7D32; /* Dark Green text */
+}
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #FFF59D; /* Slightly darker yellow on hover */
+}
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FFC1E3; /* Light Pink */
+}
+.testimonial-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+.testimonial {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #424242; /* Dark Grey */
+}
+.testimonial.active {
+    display: block;
+}
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.testimonial-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: #4CAF50; /* Bright Green */
+}
+.testimonial-carousel .prev { left: -40px; }
+.testimonial-carousel .next { right: -40px; }
+
+/* Gallery */
+.gallery {
+    background-color: #E6E6FA; /* Soft Lavender */
+    padding: 50px 20px;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    background-color: #FFF8E1; /* Cream */
+    padding: 50px 20px;
+    text-align: center;
+}
+.contact form {
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input, .contact textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #BDBDBD; /* Light Grey */
+}
+.contact button {
+    padding: 10px;
+    border: none;
+    background-color: #FF9800; /* Bright Orange */
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact button:hover {
+    background-color: #FB8C00; /* Darker Orange */
+}
+
+/* Countdown Timer */
+.countdown {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #FFD180; /* Light Orange */
+    font-size: 1.5em;
+}
+#timer span {
+    font-weight: bold;
+    color: #4CAF50; /* Bright Green */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Soft Green */
+    color: #FFFFFF;
+}
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #388E3C; /* Deep Green */
+}
+
+/* Faculty Section */
+.faculty {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+.teacher {
+    width: 200px;
+    text-align: center;
+}
+.teacher img {
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px){
+    header nav ul {
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+    }
+}
+.top-banner-animation {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(270deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #FF6B6B);
+    background-size: 1000% 1000%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.education-animation {
+    background-color: #FFF9C4; /* Light Yellow */
+    padding: 30px 0;
+    text-align: center;
+}
+.top-banner-typing {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #fff;
+    background: linear-gradient(270deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #FF6B6B);
+    background-size: 1000% 1000%;
+    animation: gradientAnimation 15s ease infinite;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
